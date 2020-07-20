@@ -1,0 +1,73 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+          crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="jumbotron text-center purple-gradient color-block mb-3">
+        <div class="text-center py-5 px-4">
+            <div>
+                <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Bienvenido/a</strong></h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Default form login -->
+        <form class="text-center border border-light p-5" action="#!">
+
+
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-6">
+                    <!-- Email -->
+                    <input type="email" id="LoginEmail" class="form-control md-6" placeholder="E-mail">
+
+                    <br />
+
+                    <!-- Password -->
+                    <input type="password" id="LoginPassword" class="form-control md-6" placeholder="Contraseña">
+                    </div>
+                </div> 
+
+
+            <div class="d-flex justify-content-around">
+                <div>
+                    <!-- Remember me -->
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                        <label class="custom-control-label" for="defaultLoginFormRemember">Recordar credenciales</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sign in button -->
+            <button class="btn-rounded" type="submit">Acceder</button>
+
+            <!-- Register -->
+            <br />
+            <p>
+                ¿No cuenta con un usuario?
+                <a>@Html.ActionLink("Registrar", "CreateUser", "Users", new { area = "" }, new { @class = "navbar-brand" })</a>
+            </p>
+   
+            <div>
+                <!-- Forgot password -->
+                <a href="">¿Olvidó la contraseña?</a>
+            </div>
+
+
+        </form>
+        <!-- Default form login -->
+    </div>
+</body>
+</html>
