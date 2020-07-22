@@ -27,43 +27,37 @@
 
     <div class="container">
         <!-- Default form register -->
-        <form class="text-center border border-light p-5" action="#!">
+        <form class="text-center border border-light p-5"  action="@Url.Action("CreateUser")" method="post">
 
             <div class="form-row mb-4">
                 <div class="col">
                     <!-- First name -->
-                    <input type="text" id="RegisterFormFirstName" class="form-control" placeholder="Nombre">
+                    <input type="text" id="User_FirstName" name="User_FirstName" class="form-control" placeholder="Nombre">
                 </div>
                 <div class="col">
                     <!-- Last name -->
-                    <input type="text" id="RegisterFormLastName" class="form-control" placeholder="Apellido">
+                    <input type="text" id="User_FirstName" name="User_FirstName" class="form-control" placeholder="Apellido">
                 </div>
             </div>
 
             <!-- E-mail -->
-            <input type="email" id="RegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
+            <input type="email" id="UserName" name="UserName" class="form-control mb-4" placeholder="E-mail">
 
             <!-- Password -->
-            <input type="password" id="RegisterFormPassword" class="form-control" placeholder="Contraseña" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+            <input type="password" id="Password" min="6" name="Password" class="form-control" placeholder="Contraseña" aria-describedby="defaultRegisterFormPasswordHelpBlock">
             <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
-                At least 8 characters and 1 digit
-            </small>
-
-            <!-- Phone number -->
-            <input type="text" id="RegisterPhonePassword" class="form-control" placeholder="Telefono" aria-describedby="defaultRegisterFormPhoneHelpBlock">
-            <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
-                Optional - for two step authentication
+                Debe tener al menos 6 caracteres
             </small>
 
             <!-- Sign up button -->
-            <button class="btn btn-info my-4 btn-block" type="submit">Crear usuario</button>
+            <button class="btn btn-info my-4 btn-block" name="BtnRegister" type="submit">Crear usuario</button>
 
             <hr>
 
             <!-- Terms of service -->
             <p>
                 ¿Ya tiene una cuenta?
-                <a>@Html.ActionLink("Iniciar Sesion", "Index", "Users", new { area = "" }, new { @class = "navbar-brand" })</a>
+                <a>@Html.ActionLink("Iniciar Sesion", "Login", "UserAccount", new { area = "" }, new { @class = "navbar-brand" })</a>
 
         </form>
         <!-- Default form register -->
